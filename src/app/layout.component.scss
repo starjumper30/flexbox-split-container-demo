@@ -1,0 +1,50 @@
+:host {
+    height: 800px;
+    display: block;
+    position:relative;
+    background-color: black;
+}
+
+.panel {
+    color:white;
+    background-color: #1d1d1d;
+    padding: 5px;
+}
+
+.split {
+    display: flex;
+
+}
+
+.split > :nth-child(2) {
+    flex-grow: 1;
+}
+
+.split.vertical {
+    flex-direction: column;
+    row-gap: 10px;
+    height: 100%;
+}
+
+.split.horizontal {
+    flex-direction: row;
+    height: fit-content;
+    column-gap: 10px;
+
+    .panel.left {
+        overflow: scroll;
+    }
+
+    .panel.top.left {
+        resize: both;
+            
+    }
+
+    .panel.bottom.left {
+        resize: horizontal;
+            
+    }
+}
+
+
+
